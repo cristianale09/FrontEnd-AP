@@ -1,0 +1,17 @@
+.row{
+    padding: 4.5em;
+/*    border: 5px solid #000000;*/
+}
+
+h1{
+    text-align: center;
+}
+
+#botones{
+    margin-top: 1em;
+}
+
+#button{
+    margin-top: 2em;
+    margin-left: 30em;
+}

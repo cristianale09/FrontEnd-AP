@@ -1,0 +1,19 @@
+<div id="acerca-de" class="row">
+    <button type="button" class="btn btn-primary btn-lg btn-block" routerLink="/editacercade/1" *ngIf="isLogged">
+        editar descripcion
+    </button>
+
+    <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+        <img src={{persona.img}} alt="foto perfil" id="fotoDePerfil">
+    </div>
+    <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+        <h3 id="nombre">{{persona.nombre}} {{persona.apellido}}</h3>
+        <h5>Full Stack Developer Jr</h5>
+    </div>
+    <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+        <span>
+            <h3>Acerca de mi</h3>
+            <p>{{persona.descripcion}}</p>
+        </span>
+    </div>
+</div>

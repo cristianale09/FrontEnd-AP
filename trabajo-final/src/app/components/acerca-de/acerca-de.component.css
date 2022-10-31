@@ -1,0 +1,77 @@
+.row{
+    padding: 0.7em;
+/*    border: 5px solid #000000;*/
+}
+
+div{
+    background-color: #3366ff;
+    text-align: center;
+    color: aliceblue;
+}
+
+#nombre{
+    font-weight: bold;
+    margin-top: 0.4em;
+}
+
+@media (min-width: 1920px){
+    #fotoDePerfil{
+        position: absolute;
+        width: 12em;
+        border-radius: 100%;
+        box-shadow: 3px 3px 3px gray;
+        left: 3%;
+        top: 30em;
+    }
+}
+
+@media (max-width: 1919px) and (min-width: 1400px){
+    #fotoDePerfil{
+        position: absolute;
+        margin-top: 5em;
+        width: 15em;
+        border-radius: 100%;
+        box-shadow: 3px 3px 3px gray;
+        left: 2%;
+        top: 23em;
+    }
+}
+
+@media (max-width: 1399px) and (min-width: 1200px){
+    #fotoDePerfil{
+       position: absolute;
+        width: 11em;
+        border-radius: 100%;
+        box-shadow: 3px 3px 3px gray;
+        left: 2%;
+        top: 21.5em;
+    }
+}
+
+@media (max-width: 1199px) and (min-width: 768px){
+    #fotoDePerfil{
+        position: absolute;
+        width: 8em;
+        border-radius: 100%;
+        box-shadow: 3px 3px 3px gray;
+        left: 2%;
+        top: 23em;
+    }
+}
+
+@media (max-width: 767px) and (min-width: 0px){
+    #nombre{
+        font-weight: bold;
+        margin-top: 6.5em;
+    }
+
+
+    #fotoDePerfil{
+        position: absolute;
+        width: 10em;
+        border-radius: 100%;
+        box-shadow: 3px 3px 3px gray;
+        left: 27%;
+        top: 15em;
+    }
+}

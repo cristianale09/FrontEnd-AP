@@ -1,0 +1,50 @@
+<section id="about" class="about">
+    <div class="row">
+        <div class="section-title">
+            <h2>Hard Skills</h2>
+        </div>
+        <div class="col-lg-2">
+            <button type="button" routerLink="/newhardskills/" class="btn btn-dark" *ngIf="isLogged">Nueva Hard Skill</button>
+        </div>
+        <div>        
+            <div class="row">
+                <div class="col-sm-4 col-md-4 col-lg-2 circulo" *ngFor="let hardSkills of hardSkills">
+                    <circle-progress
+                    [percent]="(hardSkills.porcentaje)"  
+                    [radius]="100"
+                    [space]="-10"
+                    [showBackground]="true"
+                    [backgroundColor]="'#53a9ff'"
+                    [outerStrokeGradient]="true"
+                    [outerStrokeWidth]="10"
+                    [outerStrokeColor]="'#FFFFFF'"
+                    [innerStrokeColor]="'#4882c2'"
+                    [innerStrokeWidth]="10"
+                    [title]="(hardSkills.nombre)"
+                    [showTitle]="true"
+                    [titleColor]="'#FFFFFF'"
+                    [showSubtitle]="false"
+                    [animateTitle]="false"
+                    [animationDuration]="1000"
+                    [showUnits]="false"
+                    [clockwise]="false"
+                    [startFromZero]="false"
+                    [lazy]="true"image.png
+                    ></circle-progress>
+                    <div>
+                        <td *ngIf="isLogged">
+                            <button type="button" class="btn btn-primary" routerLink="/editskill/{{hardSkills.id}}">
+                                <i class="bi bi-pencil-fill"></i>Editar
+                            </button>
+                        </td>
+                        <td *ngIf="isLogged">
+                            <button class="btn btn-danger" (click)="delete(hardSkills.id)">
+                                <i class="bi bi-pencil-fill"></i>Borrar
+                            </button>
+                        </td>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+</section>

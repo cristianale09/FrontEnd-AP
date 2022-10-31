@@ -1,0 +1,53 @@
+<!-- Section: Design Block -->
+<section class="text-center">
+  <!-- Background image -->
+  <div class="p-5 bg-image" style="
+        background-image: url('https://mdbootstrap.com/img/new/textures/full/171.jpg');
+        height: 300px;
+        "></div>
+  <!-- Background image -->
+
+  <div class="card mx-4 mx-md-5 shadow-5-strong" style="
+        margin-top: -100px;
+        background: hsla(0, 0%, 100%, 0.8);
+        backdrop-filter: blur(30px);
+        ">
+    <div class="card-body py-5 px-md-5">
+
+      <div class="row d-flex justify-content-center">
+        <div class="col-lg-6">
+          <h2 class="fw-bold mb-5">Sign up now</h2>
+          <p class="text-white-50 mb-5">Por favor, ingrese usuario y contraseña</p>
+          <form #f="ngForm" (ngSubmit)="onLogin()" novalidate>
+            <!-- 2 column grid layout with text inputs for the first and last names -->
+            <div class="row">
+              <div class="col-mb-4">
+                <div class="form-outline">
+                  <input type="email" id="nombreUsuario" name="nombreUsuario" class="form-control form-control-lg" [(ngModel)]="nombreUsuario" required/>
+                  <label class="form-label" for="nombreUsuario">Usuario</label>
+                </div>
+              </div>
+             
+             <!-- Password input -->
+              <div class="form-outline mb-4">
+                <input type="password" id="password" name="password" class="form-control form-control-lg" [(ngModel)]="password" required/>
+                    <label class="form-label" for="password">Contraseña</label>
+              </div>
+
+              <!-- Submit button -->
+              <button type="submit" class="btn btn-primary btn-block mb-4">
+                Sign up
+              </button>
+
+              <!-- Register buttons -->
+              <div>
+                <p class="mb-0">¿No tienes una cuenta? <a href="#!" class="text-white-50 fw-bold">Sign Up</a></p>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Section: Design Block -->

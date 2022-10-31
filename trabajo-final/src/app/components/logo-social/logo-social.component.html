@@ -1,0 +1,24 @@
+<div id="home" class="row">
+    <div class="container">
+        <div class="logo">
+            <a href="https://argentinaprograma.inti.gob.ar/"><img src="../../assets/APLogo.png" alt="logo argentina programa" id="logoAP"></a>
+        </div>
+        <div>
+            <a href="https://www.linkedin.com/in/cristian-daniel-ale-33363a197/"><img src="../../assets/linkedin.png" alt="linkedin"></a>
+            <a href="https://twitter.com/CristianAle09"><img src="../../assets/twitter.png" alt="twitter"></a>
+            <a href="https://www.instagram.com/cristianale06/"><img src="../../assets/instagram.png" alt="instagram"></a>
+            <a href="https://github.com/cristianale09"><img src="../../assets/github.png" alt="github"></a>
+            <a href="https://www.facebook.com/cristianale09/"><img src="../../assets/facebook.png" alt="facebook"></a>
+            
+            <!--boton de Login-->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal" (click)="login()" *ngIf="!isLogged"> 
+                Login
+            </button>
+
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal" (click)="onLogOut()" *ngIf="isLogged"> 
+                Logout
+            </button>
+
+            </div>
+    </div>
+</div>

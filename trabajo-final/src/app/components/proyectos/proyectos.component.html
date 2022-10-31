@@ -1,0 +1,51 @@
+<section id="about" class="about">
+    <div id="proyecto" class="row">
+        <div class="section-title">
+            <h2>Proyectos realizados</h2>
+        </div>
+        <div class="col-lg-2">
+            <button type="button" routerLink="/newproyectos/" class="btn btn-dark" *ngIf="isLogged">nuevo proyecto</button>
+        </div>
+        <div class="col-lg-1"></div>
+        <div class="col-lg-11">
+            <table class="table">
+                <tbody>
+                    <tr *ngFor="let Proyectos of proyectos">
+                        <td>
+                            <h3>
+                                {{Proyectos.nombre}}
+                            </h3>
+                        </td>
+                        <td>
+                            <h5>
+                                {{Proyectos.descripcion}}
+                            </h5>
+                        </td>
+                        <!--
+                        <td>
+                            <h5>
+                                {{Proyectos.img}}
+                            </h5>
+                        </td>
+                        -->
+                        <!--
+                        <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+                            <img src={{Proyectos.img}} alt="foto de proyecto" id="fotoDeproyecto">
+                        </div>
+                        -->                        
+                        <td *ngIf="isLogged">
+                            <button type="button" class="btn btn-primary" routerLink="/editproyectos/{{Proyectos.id}}">
+                                <i class="bi bi-pencil-fill"></i>Editar
+                            </button>
+                        </td>
+                        <td *ngIf="isLogged">
+                            <button class="btn btn-danger" (click)="delete(Proyectos.id)">
+                                <i class="bi bi-pencil-fill"></i>Borrar
+                            </button>
+                        </td>                        
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
